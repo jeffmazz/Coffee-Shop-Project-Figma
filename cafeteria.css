@@ -1,0 +1,975 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Baloo 2', cursive;
+}
+
+body {
+    margin: 15px 10%;
+    padding: 10px;
+}
+
+#header {
+    margin: 0 auto;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+#img-lateral {
+    width: 450px;
+    height: 335px;
+    position: absolute;
+    top: 10%;
+    right: 10%;
+}
+
+#headerCarrinho {
+    position: fixed;
+    z-index: 1000;
+    top: 35%;
+    right: 4%;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: #F1E9C9;
+    cursor: pointer;
+}
+.headerCarrinho {
+    transform: translateY(0px);
+    animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px)}
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px)
+    }
+}
+
+.cabecalho {
+    margin: 35px 0;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    text-align: start;
+}
+
+.cabecalho h1 {
+    padding-bottom: 20px;
+    font-size: 40px;
+    line-height: 45px;
+}
+
+.cabecalho p {
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.delivery-infos {
+    display: flex;
+    gap: 20px;
+}
+
+.delivery-infos p {
+    display: flex;
+    align-items: center;
+    font-size: 10pt;
+    padding-bottom: 10px;
+    text-indent: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.tituloCafes {
+    margin: 30px auto;
+    text-align: center;
+}
+
+#cafes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #8D8686;
+}
+
+.coffeeBoxes {
+    background-color: #F3F2F2;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,.2);
+}
+
+#span-1 {
+    color: #C47F17;
+    background-color: #F1E9C9;
+    font-size: 10pt;
+    margin: 3px;
+    padding: 4px;
+    border-radius: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#span-2 {
+    color: #8D8686;
+    font-size: 11pt;
+}
+
+#coffeeLastLine {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+#preco {
+    font-size: 22px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    color: #574F4D;
+}
+
+#buttons {
+    display: flex;
+}
+
+button {
+    background-color: #E6E5E5;
+    border: none;
+    color: #8047F8;
+    font-size: 20px;
+    padding-left: 13px;
+    padding-right: 13px;
+    cursor: pointer;
+}
+
+#qtd {
+    font-size: 20px;
+    background-color: #E6E5E5;
+}
+
+#carrinho {
+    cursor: pointer;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.finalizacaoDoPedido {
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.endereco-pagamento {
+    display: flex;
+    flex-direction: column;
+}
+
+#endereco {
+    padding: 25px;
+    background-color: #F3F2F2;
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,.2);
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+.endereco-p1 {
+    color: #403937;
+    display: flex;
+    align-items: center;
+    text-indent: 20px;
+}
+
+.endereco-p2 {
+    color: #574F4D;
+    text-indent: 53px;
+    margin-bottom: 25px;
+}
+
+#form {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+}
+
+.box1 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+.box2 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+.box3 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 3;
+}
+
+.box4 {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 3;
+}
+
+.box5 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 4;
+    grid-row-end: 4;
+}
+
+.box6 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 4;
+}
+
+.box7 {
+    grid-column-start: 4;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 4;
+    color: #8D8686;
+    background-color: #EEEDED;
+    border: 1px solid #E6E5E5;
+}
+
+input {
+    color: #8D8686;
+    height: 40px;
+    background-color: #EEEDED;
+    border: 1px solid #E6E5E5;
+    text-indent: 10px;
+}
+
+input {
+    outline: none;
+}
+
+.vazio {
+    border: 1px solid red;
+    box-shadow: 0 0 2px red;
+    outline: none;
+}
+
+.preenchido {
+    border: 1px solid rgb(4,170,109);
+    box-shadow: 0 0 2px rgb(4,170,109);
+    outline: none;
+}
+
+#pagamento {
+    padding: 25px;
+    margin-bottom: 25px;
+    color: #403937;
+    background-color: #F3F2F2;
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,.2);
+    flex-grow: 1;
+}
+
+.cabecalhoPagamento {
+    display: grid;
+    grid-template-columns: 25px 450px;
+}
+
+.svgPagamento {
+    width: 22px;
+    height: 22px;
+}
+
+.tituloPagamento {
+    font-size:16pt;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 12px;
+    margin-bottom: 20px;
+}
+
+.subtituloPagamento {
+    font-size: 10pt;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#formasDePagamento {
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    border: 1px solid #E6E5E5;
+    background-color: #EEEDED;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#credito,#debito,#dinheiro {
+    display: none;
+}
+
+.paymentFormChecked {
+    background: #DBAC2C;
+    transition: 1.5s;
+}
+
+#lateral {
+    padding: 15px;
+    background-color: #F3F2F2;
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,.2);
+    align-self: flex-start;
+    flex-grow: 1;
+}
+
+#lateral, #endreco, #pagamento {
+    flex-grow: 1;
+}
+
+.selecionados {
+    color: #574F4D;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 2.5px;
+}
+
+.selecionadosMenosBtn {
+    width: 30px;
+    font-size: 10pt;
+}
+
+.selecionadosMaisBtn {
+    width: 30px;
+    font-size: 10pt;
+}
+
+.selecionadosPrice {
+    font-size: 13pt;
+}
+
+.svg-trash-can {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#totalPrice {
+    width: 200px;
+    margin: 20px auto auto auto;
+    color: black;
+}
+
+.totalPrice {
+    float: right
+}
+
+#finalizarPedido {
+    color: white;
+    background-color: #DBAC2C;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.finalBody {
+    margin: 10px 150px;
+    padding: 10px;
+}
+
+.leftHead h2 {
+    color: #C47F17;
+    text-indent: 20px;
+}
+
+.leftHead p {
+    color: black;
+    font-size: 12pt;
+    margin: -5px auto 20px auto;
+    font-family: Arial, Helvetica, sans-serif;
+    text-indent: 20px;
+}
+
+div.pedidoFinal {
+    border: 1px solid #C47F17;
+    border-radius: 30px;
+    padding: 30px;
+}
+
+div.pedidoFinal p {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 10px;
+}
+
+#enderecoEntrega {
+    display: flex;
+    flex-direction: column;
+}
+
+#a1,#b1,#c1 {
+    font-family: Arial, Helvetica, sans-serif;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#a2 {
+    grid-column-start: 2;
+    grid-column-end: 2;
+}
+
+#a3,#b3,#c3 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+
+#a4 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+
+#imgMoney {
+    width: 25px;
+    height: 25px;
+    background-color: rgb(128,71,248);
+    padding: 5px;
+    border-radius: 20px;
+}
+
+#gridFinalPage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.titulo-bairro, .titulo-cidade {
+    color: #C47F17;
+}
+
+.resumoDeCompra {
+    color: #C47F17;
+    text-align: left;
+}
+
+.deliveryPhoto {
+    margin-top: 85px;
+    width: 333px;
+    height: 358px;
+    transform: translateX(0px);
+    animation: run 3s ease-in-out infinite;
+}
+
+@keyframes run {
+    0% {
+        transform: translateX(0px)
+    }
+    50% {
+        transform: translateX(100px);
+    }
+    100% {
+        transform: translateX(0px)
+    }
+}
+
+@media (min-width: 0px) and (max-width: 450px) {
+
+    body {
+        margin: 15px 2.5%;
+    }
+
+    #img-lateral {
+        width: 90px;
+        height: 80px;
+        top: 2%;
+        right: 4%;
+    }
+
+    #headerCarrinho {
+        display: none;
+    }
+
+    .cabecalho h1 {
+        padding-bottom: 10px;
+        font-size: 27px;
+        line-height: 25px;
+    }
+    
+    .cabecalho p {
+        font-size: 14px;
+    }
+
+    .delivery-infos {
+        display: block;
+    }
+
+    .tituloCafes {
+        margin: 10px;
+        text-align: start;
+        font-size: 14pt;
+    }
+
+    #cafes {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .imgCafe {
+        width: 80px;
+        height: 80px;
+    }
+
+    #tipo {
+        font-size: 10pt;
+    }
+
+    #span-1 {
+        color: #C47F17;
+        background-color: #F1E9C9;
+        font-size: 7.5pt;
+        margin: 3px;
+        padding: 4px;
+        border-radius: 20px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    
+    #span-2 {
+        font-size: 8pt;
+    }
+    
+    #preco {
+        font-size: 15px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bolder;
+        color: #574F4D;
+    }
+
+    button {
+        font-size: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    #qtd {
+        font-size: 20px;
+    }
+    
+    #carrinho {
+        height: 30px;
+    }
+
+    .finalizacaoDoPedido {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 50px;
+    }
+ 
+    #endereco {
+        padding: 20px;
+    }
+    
+    #form {
+        display: grid;
+        grid-template-columns: 90px 90px 120px 60px;
+        gap: 10px;
+    }
+
+    .box1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+    
+    .box2 {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+    
+    .box3 {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+    
+    .box4 {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+    
+    .box5 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+    
+    .box6 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+    
+    .box7 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 1;
+        color: #8D8686;
+        background-color: #EEEDED;
+        border: 1px solid #E6E5E5;
+    }
+    
+    .cabecalhoPagamento {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    
+    #formasDePagamento {
+        display: grid;
+        grid-template-columns: 120px 120px 120px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #lateral {
+        width: 380px;
+    }
+
+    /*Second HTML*/
+
+    .finalBody {
+        margin: 10px 2.5%;
+    }
+    
+    .leftHead p {
+        font-size: 10pt;
+    }
+    
+    div.pedidoFinal {
+        border: 1px solid #C47F17;
+        border-radius: 30px;
+        padding: 30px;
+        width: 380px;
+    }
+    
+    .deliveryPhoto {
+        width: 83.2px;
+        height: 89.5px;
+        margin-top: 160px;
+        margin-left: -200px;
+    }
+
+}
+
+@media (min-width: 451px) and (max-width: 900px) {
+
+    body {
+        margin: 15px 3%;
+    }
+
+    #headerCarrinho {
+        display: none;
+    }
+
+    .cabecalho h1 {
+        padding-bottom: 10px;
+        font-size: 27px;
+        line-height: 25px;
+    }
+    
+    .cabecalho p {
+        font-size: 14px;
+    }
+
+    .tituloCafes {
+        margin: 10px;
+        text-align: start;
+        font-size: 14pt;
+    }
+
+    #cafes {
+        display: grid;
+        grid-template-columns: 193px 193px 193px;
+    }
+
+    .imgCafe {
+        width: 80px;
+        height: 80px;
+    }
+
+    #tipo {
+        font-size: 10pt;
+    }
+    
+    #span-2 {
+        font-size: 8pt;
+    }
+    
+    #preco {
+        font-size: 15px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bolder;
+        color: #574F4D;
+    }
+
+    button {
+        font-size: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    #qtd {
+        font-size: 20px;
+    }
+    
+    #carrinho {
+        height: 30px;
+    }
+
+    .finalizacaoDoPedido {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 50px;
+    }
+ 
+    #endereco {
+        padding: 20px;
+        flex-grow: 0;
+        width: 600px;
+    }
+    
+    #form {
+        display: grid;
+        grid-template-columns: 180px 180px 160px 140px;
+        gap: 10px;
+    }
+
+    .box1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+    
+    .box2 {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+    
+    .box3 {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+    
+    .box4 {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+    
+    .box5 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+    
+    .box6 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+    
+    .box7 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 1;
+        color: #8D8686;
+        background-color: #EEEDED;
+        border: 1px solid #E6E5E5;
+    }
+
+    #pagamento {
+        width: 600px;
+    }
+    
+    .cabecalhoPagamento {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    
+    #formasDePagamento {
+        display: grid;
+        grid-template-columns: 150px 150px 150px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #lateral {
+        width: 600px;
+        margin-top: -50px;
+    }
+
+    /*Second HTML*/
+
+    .finalBody {
+        margin: 10px 10%;
+    }
+    
+    .leftHead p {
+        font-size: 10pt;
+    }
+    
+    div.pedidoFinal {
+        border: 1px solid #C47F17;
+        border-radius: 30px;
+        padding: 30px;
+        width: 380px;
+    }
+    
+    .deliveryPhoto {
+        width: 83.2px;
+        height: 89.5px;
+        margin-top: 160px;
+        margin-left: -200px;
+    }
+
+}
+
+@media(min-width: 451px) and (max-width: 650px) {
+    #img-lateral {
+        width: 180px;
+        height: 134px;
+        top: 5%;
+        right: 5%;
+    }
+}
+
+@media(min-width: 651px) and (max-width: 900px) {
+    #img-lateral {
+        width: 180px;
+        height: 134px;
+        top: 5%;
+        right: 18%;
+    }
+}
+
+@media(min-width: 901px) and (max-width: 1199px) {
+    #img-lateral {
+        width: 270px;
+        height: 201px;
+        top: 5%;
+        right: 5%;
+    }
+
+    #headerCarrinho {
+        display: none;
+    }
+
+    .finalizacaoDoPedido {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 50px;
+    }
+    
+    #lateral {
+        width: 500px;
+        margin-top: -50px;
+    }
+
+    .selecionados {
+        color: #574F4D;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 2.5px;
+    }
+    
+    .svg-trash-can {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #totalPrice {
+        width: 200px;
+        margin: 20px auto auto auto;
+        color: black;
+    }
+    
+    .totalPrice {
+        float: right
+    }
+
+    .finalBody {
+        margin: 10px 10%;
+    }
+    
+    .leftHead p {
+        font-size: 10pt;
+    }
+    
+    div.pedidoFinal {
+        border: 1px solid #C47F17;
+        border-radius: 30px;
+        padding: 30px;
+        width: 450px;
+    }
+    
+    .deliveryPhoto {
+        width: 108.16px;
+        height: 116.35px;
+        margin-top: 160px;
+        margin-left: -230px;
+    }
+}
