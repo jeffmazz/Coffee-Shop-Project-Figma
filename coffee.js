@@ -214,7 +214,7 @@ function end() {
 }
 
 /* HEADER CARRINHO */
-document.querySelector("#headerCarrinho").addEventListener("click", () => {
+headerCarrinho.addEventListener("click", () => {
     window.scrollTo(0, 1700)
 })
 
@@ -246,13 +246,13 @@ inputCep.addEventListener("keypress", (e) => {
     }
 })
 
-const inputsClass = [inputCep, inputRua, inputBairro, inputNumero]
+const inputsClass = [inputRua, inputBairro, inputNumero]
 
 inputsClass.forEach(input => {
 
     input.addEventListener('keyup', () => {
 
-        if(input.value.trim() != 0 ) {
+        if(input.value.trim() != "" ) {
             input.classList.remove("vazio")
             input.classList.add("preenchido")
         } else {
@@ -264,21 +264,17 @@ inputsClass.forEach(input => {
 
 })
 
-// Pegar evento de endereço
-
 inputCep.addEventListener("keyup", () => {
 
     const inputValue = inputCep.value
-
-    // checar se temos a quantidade necessária de dígitos
+    inputCep.classList.remove("preenchido")
+    inputCep.classList.add("vazio")
 
     if (inputValue.length === 8) {
         pegarEndereço(inputValue)
     }
 
 })
-
-// Obtenção de endereço via API
 
 const pegarEndereço = async (cep) => {
     
@@ -300,12 +296,19 @@ const pegarEndereço = async (cep) => {
 
     if (data.erro === true) {
         form.reset()
+        fillFormInputCheckError(inputRua)
         fillFormInputCheckError(inputCep)
         fillFormInputCheckError(inputCidade)
         fillFormInputCheckError(inputUF)
+        fillFormInputCheckError(inputBairro)
+        inputCep.classList.remove("preenchido")
+        inputCep.classList.add("vazio")
         inputCep.focus()
         return
     }
+
+    inputCep.classList.remove("vazio")
+    inputCep.classList.add("preenchido")
 
     fillForm(data)
     
@@ -406,9 +409,11 @@ document.querySelector("#finalizarPedido").addEventListener("click", () => {
         return
     }
 
-    if (inputCep.value == 0) {
+    if (inputCep.value.length !== 8) {
         inputCep.focus()
+        inputCep.classList.remove("preenchido")
         inputCep.classList.add("vazio")
+        return
     }
 
     if (pedidoConcluido[0].rua == "") {
@@ -464,6 +469,9 @@ document.querySelector("#finalizarPedido").addEventListener("click", () => {
         input.classList.remove('vazio')
     })
 
+    headerCarrinho.src = "fotos/carrinho.png"
+    headerCarrinho.classList.remove("headerCarrinho")
+
     window.location.href = "pedidoConcluido.html"
 
 })
@@ -471,11 +479,11 @@ document.querySelector("#finalizarPedido").addEventListener("click", () => {
 function notificacaoCarrinho() {
 
     if (pedido.length != 0) {
-            document.getElementById("headerCarrinho").src = "fotos/carrinhoN pixlrX.png"
-            document.getElementsByTagName("img")[1].classList.add("headerCarrinho")
+            headerCarrinho.src = "fotos/carrinhoN pixlrX.png"
+            headerCarrinho.classList.add("headerCarrinho")
     } else {
-        document.getElementById("headerCarrinho").src = "fotos/carrinho.png"
-        document.getElementsByTagName("img")[1].classList.remove("headerCarrinho")
+        headerCarrinho.src = "fotos/carrinho.png"
+        headerCarrinho.classList.remove("headerCarrinho")
     }
 
 }

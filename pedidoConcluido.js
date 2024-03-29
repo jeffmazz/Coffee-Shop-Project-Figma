@@ -11,8 +11,6 @@ window.addEventListener("load", () => {
 
     const sessionStorageJSONparse = JSON.parse(sessionStorageJSONstringify)
 
-    console.log(sessionStorageJSONparse)
-
     enderecoEntrega.innerHTML += `<span id="a2"> ${sessionStorageJSONparse[0].rua}, N° ${sessionStorageJSONparse[3].numero} </span> <span id="a3"> <span class="titulo-bairro"> Bairro </span> ${sessionStorageJSONparse[6].bairro}</span> <span id="a4"> <span class="titulo-cidade"> Cidade </span> ${sessionStorageJSONparse[2].cidade} - ${sessionStorageJSONparse[1].uf} </span>`
 
     pagamentoEntrega.innerHTML += `<span id="b3"> ${sessionStorageJSONparse[4].paymentFormChecked} </span>`

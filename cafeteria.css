@@ -330,7 +330,7 @@ label {
     cursor: pointer;
 }
 
-#credito,#debito,#dinheiro {
+#cartao,#pix,#dinheiro {
     display: none;
 }
 
@@ -934,7 +934,7 @@ div.pedidoFinal p {
         align-items: center;
         gap: 2.5px;
     }
-    
+
     .svg-trash-can {
         display: flex;
         align-items: center;
