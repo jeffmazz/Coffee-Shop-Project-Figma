@@ -604,8 +604,8 @@ div.pedidoFinal p {
     
     #form {
         display: grid;
-        grid-template-columns: 90px 90px 120px 60px;
-        gap: 10px;
+        grid-template-columns: 25% 25% 35% 15%;
+        gap: 5px;
     }
 
     .box1 {
@@ -638,16 +638,16 @@ div.pedidoFinal p {
     
     .box5 {
         grid-column-start: 1;
-        grid-column-end: 3;
+        grid-column-end: 4;
         grid-row-start: 4;
         grid-row-end: 4;
     }
     
     .box6 {
-        grid-column-start: 3;
+        grid-column-start: 1;
         grid-column-end: 4;
-        grid-row-start: 4;
-        grid-row-end: 4;
+        grid-row-start: 5;
+        grid-row-end: 5;
     }
     
     .box7 {
@@ -664,16 +664,28 @@ div.pedidoFinal p {
         display: grid;
         grid-template-columns: auto auto;
     }
+
+    #pagamento {
+        margin-bottom: 0px;
+    }
     
     #formasDePagamento {
         display: grid;
-        grid-template-columns: 120px 120px 120px;
+        grid-template-columns: 120px 120px;
         justify-content: center;
         align-items: center;
     }
+
+    .thirdPaymentForm {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        justify-self: center;
+    }
     
     #lateral {
-        width: 380px;
+        width: 100%;
+        margin-top: -25px;
+        flex-grow: 1;
     }
 
     /*Second HTML*/
