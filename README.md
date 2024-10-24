@@ -8,27 +8,27 @@ O site possui um design bem bonito e interativo. Você pode visualizar as imagen
 
 <details>
   <summary> Cartão de visitas </summary>
-  <img src="images/img1.png" alt="cartão de visitas do site" width="600" height="300"/>
+  <img src="images/img1.png" alt="cartão de visitas do site" width="640" height="360"/>
 </details>
 
 <details>
   <summary> Cafés comercializados </summary>
-  <img src="images/img2.png" alt="Cafés Comercializados" width="600" height="300"/>
+  <img src="images/img2.png" alt="Cafés Comercializados" width="640" height="360"/>
 </details>
 
 <details>
   <summary> Seção de conclusão do pedido </summary>
-  <img src="images/img3.png" alt="Seção de conclusão do pedido" width="600" height="300"/>
+  <img src="images/img3.png" alt="Seção de conclusão do pedido" width="640" height="360"/>
 </details>
 
 <details>
   <summary> Preenchendo endereço e escolhendo o meio de pagamento </summary>
-  <img src="images/img5.png" alt="Finalizando o pedido" width="600" height="300"/>
+  <img src="images/img5.png" alt="Finalizando o pedido" width="640" height="360"/>
 </details>
 
 <details>
   <summary> Pedido concluído </summary>
-  <img src="images/img6.png" alt="Pedido concluído" width="600" height="300"/>
+  <img src="images/img6.png" alt="Pedido concluído" width="640" height="360"/>
 </details>
 
 ## Tecnologias Utilizadas
