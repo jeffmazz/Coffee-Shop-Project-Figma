@@ -48,3 +48,6 @@ O site possui um design bem bonito e interativo. Você pode visualizar as imagen
 
 ## Licença
 MIT
+
+## Conclusão
+O projeto Coffee Shop é uma demonstração prática de como integrar design, funcionalidade e APIs externas para criar uma experiência agradável e eficiente para os usuários. Além de simular uma cafeteria online, este projeto evidencia a importância de boas práticas em front-end, manipulação de dados com JavaScript, e consumo de APIs como a ViaCEP. Ele também reflete o aprendizado contínuo e a aplicação de tecnologias essenciais para o desenvolvimento web. Sinta-se à vontade para explorar, dar feedback ou adaptar o código para suas próprias ideias!
