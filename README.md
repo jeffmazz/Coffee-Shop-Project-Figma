@@ -28,7 +28,7 @@ O site possui um design bem bonito e interativo. Você pode visualizar as imagen
 
 <details>
   <summary> Pedido concluído </summary>
-  <img src="images/img6.png" alt="Pedido concluído" width="640" height="360"/>
+  <img src="images/img5.png" alt="Pedido concluído" width="640" height="360"/>
 </details>
 
 ## Tecnologias Utilizadas
